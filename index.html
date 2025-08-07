@@ -3,31 +3,88 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>djdelandoevents</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
   <div class="container max-w-full">
-      <header class="flex items-center h-16 px-5 sticky">
+      <div class="dropdown-content2 hidden" id="links">
+        <nav class="parent nav-hidden">
+            <div class="hidden-button">
+                <a href="about.html">about</a>
+            </div>
+            
+            <div class="hidden-button">
+                <a href="restaurants.html">restaurants</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="groceryStores.html">grocery stores</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="sightSeeing.html">sight seeing</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="entertainment.html">entertainment</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="transportation.html">transportation</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="groundTransportation.html">ground transportation</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="lodging.html">lodging</a>
+            </div>
+
+            <div class="hidden-button">
+                <a href="faq.html">FAQ</a>
+            </div>
+        </nav>
+      </div>
+
+      <header class="hamburger-menu1 flex items-center h-16 px-5 sticky">
         <img class="rounded-full h-5/6 object-cover" src="https://i.natgeofe.com/k/75ac774d-e6c7-44fa-b787-d0e20742f797/giant-panda-eating_4x3.jpg" alt="">
         <div class="w-1/6 ps-2 text-2xl font-mono">djdelando</div>
         <div class="w-5/6 flex justify-end">
-          <div class="px-4 hover:border-b-2">
+          <div class="hidden sm:block px-4 hover:border-b-2">
             <a href="#About">About</a>
           </div>
-          <div class="px-4 hover:border-b-2">
+          <div class="hidden sm:block px-4 hover:border-b-2">
           <a href="#Events">Events</a>
         </div>
-          <div class="px-4 hover:border-b-2">
+          <div class="hidden sm:block px-4 hover:border-b-2">
             <a href="#Testimonials">Testimonials</a>
           </div>
-          <div class="px-4 hover:border-b-2">
+          <div class="hidden sm:block px-4 hover:border-b-2">
             <a href="#Pricing">Pricing</a>
           </div>
-          <div class="px-4 hover:border-b-2">
+          <div class="hidden sm:block px-4 hover:border-b-2">
             <a href="#Pricing">Book</a>
           </div>
+          <button onclick="toggleLinks()" class="hamburger-toggle sm:hidden p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" id="Menu" aria-label="Menu">
+            <div class="space-y-1.5">
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+              <span class="block w-6 h-0.5 bg-gray-600"></span>
+            </div>
+          </button>
         </div>
+      </header>
+      <header class="hamburger-menu2 hidden h-full w-full bg-slate-500">
+        <div class="text-center">TESTING</div>
+        <button class="hamburger-toggle p-2 rounded-md hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200" id="Menu" aria-label="Menu">
+          <div class="space-y-1.5">
+            <span class="block w-6 h-0.5 bg-gray-600"></span>
+            <span class="block w-6 h-0.5 bg-gray-600"></span>
+            <span class="block w-6 h-0.5 bg-gray-600"></span>
+          </div>
+        </button>
       </header>
       <main class="flex flex-col">
         <div class="hidden relative w-full h-[500px] bg-[url('https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExMWRmNmMyaHNpNDdkOTRyOGJzZzRvczl5ZWJqaWFuNm01bXNlZmJ5aSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/aUhEBE0T8XNHa/giphy.gif')] bg-cover bg-center text-white flex items-center justify-center">
@@ -115,12 +172,10 @@
   </div>
 
   <script>
-    const btn = document.getElementById('test');
-    const outputParagraph = document.getElementById('output');
-
-    btn.onclick = function() {
-      image.style.border = '2px solid blue'; // Let's change the image border from the paragraph click
-    };
-  </script>
+    function toggleLinks() {
+      var links = document.getElementById("links");
+      links.style.display = links.style.display === "block" ? "none" : "block";
+  }
+  </script> 
 </html>
 
